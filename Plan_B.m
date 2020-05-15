@@ -35,7 +35,7 @@ figure(7); imshow(f_tophat); title("Top hat");
 
 
 % OCR -------------------
-ocrr = ocr(bw,'TextLayout','Block')
+ocrr = ocr(f_tophat,'TextLayout','Block')
 Iocr  = insertObjectAnnotation(f, 'rectangle', ocrr.WordBoundingBoxes, ocrr.WordConfidences);
 figure(10); imshow(Iocr);
 
